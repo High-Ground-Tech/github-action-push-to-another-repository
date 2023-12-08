@@ -34,7 +34,7 @@ then
 	echo "[+] Using SSH_DEPLOY_KEY"
 
 	# Inspired by https://github.com/leigholiver/commit-with-deploy-key/blob/main/entrypoint.sh , thanks!
-	mkdir --parents "$HOME/.ssh"
+	mkdir -p "$HOME/.ssh"
 	DEPLOY_KEY_FILE="$HOME/.ssh/deploy_key"
 	echo "${SSH_DEPLOY_KEY}" > "$DEPLOY_KEY_FILE"
 	chmod 600 "$DEPLOY_KEY_FILE"
