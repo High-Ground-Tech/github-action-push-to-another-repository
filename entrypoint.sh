@@ -123,6 +123,12 @@ echo "[+] Copying contents of source repository folder $SOURCE_DIRECTORY to fold
 cp -r "$SOURCE_DIRECTORY"/. "$CLONE_DIR/$TARGET_DIRECTORY"
 cd "$CLONE_DIR"
 
+echo "[+] Enable git lfs"
+git lfs install
+
+echo "[+] Track zip files"
+git lfs track "*.zip"
+
 echo "[+] Files that will be pushed"
 ls -la
 
